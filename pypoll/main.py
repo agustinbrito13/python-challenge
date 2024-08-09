@@ -49,3 +49,19 @@ for candidate, votes in candidates_votes.items():
 print("-------------------------")
 print(f"Winner: {winner}")
 print("-------------------------")
+
+
+txt_file = os.path.join("..", "pypoll", "analysis", "results")
+with open(txt_file, 'w') as file:
+ 
+# Print the results
+    file.write("Election Results")
+    file.write("-------------------------")
+    file.write(f"Total Votes: {total_votes}")
+    file.write("-------------------------")
+    file.write(f"{candidate}: {votes} votes ({percentage:.2f}%)")
+    file.write("-------------------------")
+    file.write(f"Winner: {winner}")
+    file.write("-------------------------")
+
+

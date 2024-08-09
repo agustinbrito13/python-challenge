@@ -80,6 +80,19 @@ print("Average Change""$" + str(round(average_change,2)))
 print(f"Greatest Increase in Profits: {greatest_increase_date} (${greatest_increase})")
 print(f"Greatest Decrease in profits:{greatest_decrease_date} ($){greatest_decrease})")
 
+txt_file = os.path.join("..", "Pybank", "analysis", "results")
+with open(txt_file, 'w') as file:
+ 
+# Print the results
+    file.write("Financial Analysis")
+    file.write("--------------------------")
+    file.write(f"total_months :{total_months}")
+    file.write(f"Total:${total_profit_losses}")
+    file.write("Average Change""$" + str(round(average_change,2)))
+    file.write(f"Greatest Increase in Profits: {greatest_increase_date} (${greatest_increase})")
+    file.write(f"Greatest Decrease in profits:{greatest_decrease_date} ($){greatest_decrease})")
+    
+
 
 
         
